@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Slider from '../MyComponents/SmallComponents/Slider';
 import './Home.css';
 import { FaUser } from 'react-icons/fa';
+import User from './User';
+
 
 
 
@@ -28,6 +30,7 @@ const products = [
 ];
 
 const Home = () => {
+    const [showUser, setShowUser] = useState(false);
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const productsToShow = products.slice(currentSlide * 6, (currentSlide * 6) + 6);
@@ -40,6 +43,18 @@ const Home = () => {
         setCurrentSlide(currentSlide === Math.floor(products.length / 6) ? 0 : currentSlide + 1);
     };
 
+    const handleSignInClick = () => {
+        setShowUser(true);
+        const message = document.querySelector('.card-text');
+        message.style.display = 'none';
+        const button = document.querySelector('.user-login button');
+        button.style.display = 'none';
+
+    };
+
+
+
+
     return (
         <div>
             <Slider />
@@ -48,8 +63,8 @@ const Home = () => {
                     <div className="card-body">
                         <img src='https://images-eu.ssl-images-amazon.com/images/G/02/kindle/journeys/ZTA2YjQwMmUt/ZTA2YjQwMmUt-NzM5MDdjMTIt-w758._SY608_CB594723446_.jpg' />
                         <div className='under-card'>
-                            <h2>Top Deal</h2>
-                            <a>See more</a>
+                            {/* <h2>Top Deal</h2>
+                            <a>See more</a> */}
                         </div>
                     </div>
                 </div>
@@ -57,8 +72,8 @@ const Home = () => {
                     <div className="card-body">
                         <img src='https://images-eu.ssl-images-amazon.com/images/G/02/prime/rudolph/Action-Nose-DesktopCard-758x608_2x._SY608_CB615428916_.jpg' />
                         <div className='under-card'>
-                            <h2>Top Deal</h2>
-                            <a>See more</a>
+                            {/* <h2>Top Deal</h2>
+                            <a>See more</a> */}
                         </div>
                     </div>
                 </div>
@@ -66,17 +81,18 @@ const Home = () => {
                     <div class="card-body">
                         <img src='https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg' />
                         <div className='under-card'>
-                            <h2>Top Deal</h2>
-                            <a>See more</a>
+                            {/* <h2>Top Deal</h2>
+                            <a>See more</a> */}
                         </div>
                     </div>
                 </div>
                 <div class="cardC">
                     <div class="card-body user-login">
                         <spam className="icon"><FaUser /></spam>
-                        <span>User</span>
+                        <a>Good Morning`</a>
                         <p class="card-text">Sign in for your best experience</p>
-                        <button class="btn btn-primary">Sign In</button>
+                        <button onClick={handleSignInClick} class="btn btn-primary">Sign In</button>
+                        {showUser && <User />}
                     </div>
                 </div>
 
@@ -174,5 +190,6 @@ const Home = () => {
         </div>
     );
 };
+
 
 export default Home;
