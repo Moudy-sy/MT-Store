@@ -8,6 +8,7 @@ import User from './User';
 
 
 
+
 const products = [
     { id: 1, name: 'iPhone 14 Pro 512GB', image: 'https://media.croma.com/image/upload/v1662655041/Croma%20Assets/Communication/Mobiles/Images/261980_o48qqq.png', price: `£1299` },
     { id: 2, name: 'Apple TV 4K', image: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-tv-4k-hero-select-202210_FMT_WHH?wid=640&hei=600&fmt=jpeg&qlt=90&.v=1664896361164', price: `£149.99` },
@@ -58,8 +59,8 @@ const Home = () => {
     return (
         <div>
             <Slider />
-            <div class="card-container top">
-                <div class="cardC">
+            <div className="card-container top">
+                <div className="cardC">
                     <div className="card-body">
                         <img src='https://images-eu.ssl-images-amazon.com/images/G/02/kindle/journeys/ZTA2YjQwMmUt/ZTA2YjQwMmUt-NzM5MDdjMTIt-w758._SY608_CB594723446_.jpg' />
                         <div className='under-card'>
@@ -68,7 +69,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="cardC">
+                <div className="cardC">
                     <div className="card-body">
                         <img src='https://images-eu.ssl-images-amazon.com/images/G/02/prime/rudolph/Action-Nose-DesktopCard-758x608_2x._SY608_CB615428916_.jpg' />
                         <div className='under-card'>
@@ -77,7 +78,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="cardC ">
+                <div className="cardC ">
                     <div class="card-body">
                         <img src='https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg' />
                         <div className='under-card'>
@@ -86,11 +87,11 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="cardC">
-                    <div class="card-body user-login">
-                        <spam className="icon"><FaUser /></spam>
+                <div className="cardC">
+                    <div className="card-body user-login">
+                        <span className="icon"><FaUser /></span>
                         <a>Good Morning`</a>
-                        <p class="card-text">Sign in for your best experience</p>
+                        <p className="card-text">Sign in for your best experience</p>
                         <button onClick={handleSignInClick} class="btn btn-primary">Sign In</button>
                         {showUser && <User />}
                     </div>
@@ -111,8 +112,8 @@ const Home = () => {
                 <button onClick={goToPreviousSlide}>&#8249;</button>
                 <button onClick={goToNextSlide}>&#8250;</button>
             </div>
-            <div class="card-container">
-                <div class="card-2 card">
+            <div className="card-container">
+                <div className="card-2 card">
                     <img src='https://images-eu.ssl-images-amazon.com/images/G/02/ACS/Made_in_Italy/2023/GWs/March/bubble_shoveler/UK_BUBBLE_SHOVELER_400x400_MII_Gifting._CB614272559_.jpg' />
                     <img src='https://images-eu.ssl-images-amazon.com/images/G/02/ACS/Made_in_Italy/2023/GWs/March/bubble_shoveler/UK_BUBBLE_SHOVELER_400x400_MII_Apparel._CB614272556_.jpgv' />
                     <img src='https://images-eu.ssl-images-amazon.com/images/G/02/ACS/Made_in_Italy/2023/GWs/March/bubble_shoveler/UK_BUBBLE_SHOVELER_400x400_MII_Home._CB614272559_.jpg' />
@@ -125,8 +126,8 @@ const Home = () => {
                     <img src='https://images-eu.ssl-images-amazon.com/images/G/02/amazonlaunchpad/UK/Gateway/2022/2-Feb/BUBBLER/BUBBLE_CLOTHING_400x400._CB647222103_.jpg' />
                 </div>
             </div>
-            <div class="card-container">
-                <div class="cardC">
+            <div className="card-container">
+                <div className="cardC">
                     <div className="card-body">
                         <img src='https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_Fitness_2X._SY608_CB639748111_.jpg' />
                         <div className='under-card'>
@@ -135,7 +136,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="cardC">
+                <div className="cardC">
                     <div className="card-body">
                         <img src='https://images-na.ssl-images-amazon.com/images/W/IMAGERENDERING_521856-T1/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_2x._SY608_CB431800964_.jpg' />
                         <div className='under-card'>
@@ -144,7 +145,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="cardC ">
+                <div className="cardC ">
                     <div className="card-body">
                         <img src='https://images-eu.ssl-images-amazon.com/images/G/02/IMDbTV/Marketing/Gateway/NeighboursLibraryLaunchFeb/NeighboursS27_DesktopImageCard_758x608_newKA_91257_en-GB._SY608_CB612804707_.jpg' />
                         <div className='under-card'>
@@ -153,7 +154,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div class="cardC">
+                <div className="cardC">
                     <div className="card-body">
                         <img src='https://images-eu.ssl-images-amazon.com/images/G/02/books/deals/Calendar23/GW_758x608_UK._SY608_CB614473538_.jpg' />
                         <div className='under-card'>
