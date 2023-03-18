@@ -1,7 +1,7 @@
 
 # MT-Store
 
-in order to diplay the project you need to install the following npm
+In order to diplay the project you need to install the following npm
 <br>
 <br>
 <br>
