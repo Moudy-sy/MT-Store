@@ -12,4 +12,3 @@ npm install react-icons --save
 npm install antd
 <br>
 npm install react-router-dom
-<br>
