@@ -5,7 +5,7 @@ import React from 'react';
 function UserProfile(props) {
     const { firstName, lastName, imageUrl } = props;
     const user = {
-        firstName: 'John',
+        firstName: 'Username',
         lastName: 'Doe',
         imageUrl: 'https://example.com/john-doe.jpg'
     };
